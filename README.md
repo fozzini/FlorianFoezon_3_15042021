@@ -1,7 +1,7 @@
 # FlorianFoezon_3_15042021
 TP3-openclassrooms-dev-front
 
-![image](https://user-images.githubusercontent.com/13948998/115983589-6738e900-a5a2-11eb-97e9-b7f9ceb8af3e.png)
+
 
 
 Vous venez d’être recruté chez Ohmyfood!, en tant que développeur junior. Félicitations !
