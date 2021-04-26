@@ -11,34 +11,35 @@
     <body class="body">
     	<header class="header">
             <div class="header__logo">
-                <h1>ohmyfood!</h1>
+                <h1>ohmyfood</h1>
             </div>
-            <div>
-                <label for="recherche"><i class="fas fa-map-marker-alt"></i></label>
-                <input type="search" id="recherche" value="Paris, Belleville">
+            <div class="header__searchbar">
+                <label for="recherche" class="header__searchbar__icon"><i class="fas fa-map-marker-alt"></i></label>
+                <input type="search" id="recherche" value="Paris, Belleville" class="header__searchbar__input">
             </div>
-            <h2>Réservez le menu qui vous convient</h2>
-            <h3>Découvrez des restaurants d'exception, sélectionnés par nos soins</h3>
-            <button>Explorer nos restaurants</button>
+            <h2 class="header__title">Réservez le menu qui<br>vous convient</h2>
+            <h3 class="header__subtitle {
+                ">Découvrez des restaurants d'exception, sélectionnés par nos soins.</h3>
+            <button class="header__button">Explorer nos restaurants</button>
         </header>
-        <main>
-            <section>
-                <h2>
+        <main class="main">
+            <section class="main__services">
+                <h2 class="main__services__title">
                     Fonctionnement
                 </h2>
-                 <nav>
-                     <ol>
-                         <li>
+                <aside>
+                    <ol>
+                        <li>
                             <a href="#Restaurants"> <i class="fas fa-mobile-alt"></i> Choisissez un restaurant</a>
-                         </li>
-                         <li>
+                        </li>
+                        <li>
                             <a href=""> <i class="fas fa-list-ul"></i> Composez votre menu</a>
-                         </li>
-                         <li>
+                        </li>
+                        <li>
                             <a href=""> <i class="fas fa-store"></i> Dégustez au restaurant</a>
-                         </li>
+                        </li>
                     </ol>   
-                </nav>
+                </aside>
              </section>
              <section id="Restaurants">
                  <h2>Restaurants</h2>
