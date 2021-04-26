@@ -1,7 +1,43 @@
-@import "./utils/variables";
-@import "./utils/variables";
-@import "./utils/functions";
-@import "./utils/mixins";
-@import "./layout/form";
-@import "./layout/header";
-@import "./layout/nav";
+@font-face {
+    font-family: 'shrikhand';
+    src: url('shrikhand-regular-webfont.eot');
+    src: url('/sass/Base/font/Shrikhand/shrikhand-regular-webfont.ttf') format('embedded-opentype'),
+         url('/sass/Base/font/Shrikhand/shrikhand-regular-webfont.woff2') format('woff2'),
+         url('/sass/Base/font/Shrikhand/shrikhand-regular-webfont.woff') format('woff'),
+         url('/sass/Base/font/Shrikhand/shrikhand-regular-webfont.ttf') format('truetype'),
+         url('/sass/Base/font/Shrikhand/shrikhand-regular-webfont.svg#shrikhandregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'roboto';
+    src: url('/sass/Base/font/roboto/roboto-regular-webfont.eot');
+    src: url('/sass/Base/font/roboto/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/sass/Base/font/roboto/roboto-regular-webfont.woff2') format('woff2'),
+         url('/sass/Base/font/roboto/roboto-regular-webfont.woff') format('woff'),
+         url('/sass/Base/font/roboto/roboto-regular-webfont.ttf') format('truetype'),
+         url('/sass/Base/font/roboto/roboto-regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+.body{
+    margin: 0px;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    height:auto;
+    &__logo{
+      height:63px;
+      h1{
+          font-family:Shrikhand;
+      }
+    } 
+
+}
+
