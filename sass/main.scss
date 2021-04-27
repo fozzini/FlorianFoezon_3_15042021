@@ -83,7 +83,7 @@
     &__button {
         width:auto;
         box-shadow: 0px 5px 18px -3px #899599;
-        background:linear-gradient(to bottom, #FF79DA 5%, #9356DC 100%);
+        background:linear-gradient(175deg, #FF79DA 5%, #9356DC 100%);
         background-color:#FF79DA;
         border: none;
         border-radius:35px;
@@ -96,10 +96,10 @@
         margin-top:11px;
         margin: 3% 20% 0% 22%;
         text-decoration:none;
-        text-shadow:0px 1px 0px #e1e2ed;
+    
         
         &:hover {
-            background:linear-gradient(to bottom, #9356DC 5%, #FF79DA 100%);
+            background:linear-gradient(175deg, #9356DC 5%, #FF79DA 100%);
             background-color:#9356DC;
         }
         &:active {
@@ -113,11 +113,131 @@
     &__services{
         display: flex;
         flex-direction: column;
+        padding-bottom: 33px;
         &__title{
             font-family: roboto;
             font-weight: bold;
             margin-left: 21px;
             padding-top: 25px;
         }
+        &__ordertype{
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            counter-reset: section;
+            &__list{ 
+                margin: 15px 18px 18px 32px;
+                text-decoration: none;
+                font-family: roboto;
+                font-weight: bold;
+                color: black;
+                background-color: #f6f6f6;
+                border-radius: 18px;
+                box-shadow: #c3c3c3 0px 3px 20px;
+                padding: 20px 0px 15px 15px;
+                position: relative;  
+                &::before {
+                    counter-increment: section;
+                    content: "" counter(section);
+                    position:absolute;
+                    display: flex;
+                    list-style-type: decimal;
+                    background-color: #9356DC;
+                    border-radius: 45px;
+                    font-size: 15px;
+                    font-family: roboto;
+                    font-weight: lighter;
+                    color: white;
+                    padding: 2px 8px 2px 8px;
+                    top: 20px;
+                    left:-11px;   
+                    text-decoration: none;
+                }
+                &__icons{
+                    margin: 0px 21px 10px 19px;
+                    font-size: 20px;
+                    color:grey;
+                }
+                &:hover{
+                    i{
+                        color:#9356DC; 
+                    }   
+                }   
+                &:active{
+                    background-color: #f5edff;
+                    top:1px;
+                } 
+            }  
+        }
+    }&__restaurants{
+        background-color: #f6f6f6;
+        height: auto;
+        &__title{
+            font-family: roboto;
+            padding: 50px 20px 20px 21px;
+            margin-bottom: 0px;
+        }
+        &__sticker{
+            text-decoration: none;
+            height: auto;
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            background-color: white;
+            height: auto;
+            border-radius: 18px;
+            box-shadow: #c3c3c3 0px 3px 20px;
+            margin:0px 20px 20px 20px;
+            &::before{
+                content: "Nouveau";
+                position:absolute;
+                font-family: roboto;
+                background-color: #99E2D0;
+                color:#008766;
+                right:12px;
+                top:12px;
+                padding:5px 12px 5px 12px;
+                font-size: 14px;
+                border-radius: 2px;
+            }
+            
+            &__title{
+                font-family: roboto;
+                font-weight: bold;
+                font-size: 18px;
+                color: black;
+                margin:11px 10px 5px 2px;
+            }
+            &__subtitle{
+                font-family: roboto;
+                font-weight: lighter;
+                font-size: 16.5px;
+                color: black;
+                margin:0px 0px 0px 4px;
+            }
+            &__lapalette{
+                background-image: url(/sass/Base/images/restaurants/jay-wennington.jpg);
+                background-repeat: no-repeat;
+                background-position:bottom;
+                background-size:cover;
+                padding: 26%;
+                border-radius: 15px 15px 0px 0px;
+            }
+            &__description{
+                border-radius: 0px 0px 15px 15px;
+                border-top: none;
+                padding: 0px 10px 13px 10px;
+                position: relative;
+                i{
+                    font-size: 25px;
+                    color:black;
+                    position:absolute;
+                    top: 20px;
+                    left:287px;
+                }
+
+            }
+        }
+        
     }
 }
