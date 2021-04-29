@@ -23,10 +23,9 @@
     font-style: normal;
 
 }
-
-
 .body{
     margin: 0px;
+    height: auto;
 }
 .header{
     display: flex;
@@ -110,6 +109,7 @@
 }
 .main{
     height: auto;
+    
     &__services{
         display: flex;
         flex-direction: column;
@@ -171,6 +171,7 @@
         }
     }&__restaurants{
         background-color: #f6f6f6;
+        padding-bottom: 44px;
         height: auto;
         &__title{
             font-family: roboto;
@@ -200,7 +201,6 @@
                 font-size: 14px;
                 border-radius: 2px;
             }
-            
             &__title{
                 font-family: roboto;
                 font-weight: bold;
@@ -215,14 +215,6 @@
                 color: black;
                 margin:0px 0px 0px 4px;
             }
-            &__lapalette{
-                background-image: url(/sass/Base/images/restaurants/jay-wennington.jpg);
-                background-repeat: no-repeat;
-                background-position:bottom;
-                background-size:cover;
-                padding: 26%;
-                border-radius: 15px 15px 0px 0px;
-            }
             &__description{
                 border-radius: 0px 0px 15px 15px;
                 border-top: none;
@@ -235,9 +227,80 @@
                     top: 20px;
                     left:287px;
                 }
-
             }
-        }
-        
+            &__lapalette{
+                background-image: url(/sass/Base/images/restaurants/jay-wennington.jpg);
+                background-repeat: no-repeat;
+                background-position:bottom;
+                background-size:cover;
+                padding: 26%;
+                border-radius: 15px 15px 0px 0px;
+            }
+            &__lanote{
+                background-image: url(/sass/Base/images/restaurants/stil.jpg);
+                background-repeat: no-repeat;
+                background-position:bottom;
+                background-size:cover;
+                padding: 26%;
+                border-radius: 15px 15px 0px 0px;
+            }
+            &__franc{
+                background-image: url(/sass/Base/images/restaurants/toa-heftiba.jpg);
+                background-repeat: no-repeat;
+                background-position:bottom;
+                background-size:cover;
+                padding: 26%;
+                border-radius: 15px 15px 0px 0px;
+            }
+            &__delice{
+                background-image: url(/sass/Base/images/restaurants/louis-hansel-shotsoflouis.jpg);
+                background-repeat: no-repeat;
+                background-position:bottom;
+                background-size:cover;
+                padding: 26%;
+                border-radius: 15px 15px 0px 0px;
+            }
+        }  
     }
+}
+.footer{
+    height: auto;
+    background-color: #353535;
+    color:white;
+    padding-bottom: 12px;
+    
+    
+
+    &__title{
+        margin-left:25px;
+        margin-top: 0%;
+        padding-top: 26px;;
+        font-family: Shrikhand;
+        font-weight: lighter;
+        font-size: 18px;   
+    }
+    &__list{
+        display: flex;
+        flex-direction: column;
+        padding-left: 25px;
+        padding-top: 6px;
+        list-style:none;
+        
+        &__links{
+            color:white;
+            font-family: roboto;
+            font-weight: lighter;
+            text-decoration: none;
+            font-size:16px;
+            margin-top: 5px;
+            margin-bottom: 0px;
+            
+        }
+            i{
+                margin-right: 6px;
+                font-size: 12px;
+            }
+    }
+    
+
 }
