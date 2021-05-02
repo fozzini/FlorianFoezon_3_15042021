@@ -283,4 +283,121 @@
 .footer__list i {
   margin-right: 6px;
   font-size: 12px;
+}
+
+.headermenu {
+  display: flex;
+  flex-direction: column;
+}
+.headermenu__logo {
+  display: flex;
+  flex-direction: row;
+  font-family: Shrikhand;
+  font-size: 30px;
+  font-weight: lighter;
+  justify-content: center;
+  margin: 20px 0px 13px 0px;
+}
+.headermenu__icon {
+  position: absolute;
+  top: 25px;
+  left: 24px;
+}
+.headermenu__sticker {
+  background-image: url(/sass/Base/images/restaurants/jay-wennington.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  margin-bottom: 10px;
+  padding: 37%;
+}
+.headermenu__description {
+  display: flex;
+  font-family: Shrikhand;
+  background-color: white;
+  position: absolute;
+  top: 262px;
+  font-size: 24px;
+  margin-top: 19px;
+  border-radius: 40px 40px 0px 0px;
+  width: 100%;
+}
+.headermenu__description__title {
+  font-weight: lighter;
+  margin-left: 21px;
+  margin-top: 40px;
+  margin-bottom: 0px;
+}
+.headermenu__description ::before {
+  position: absolute;
+  font-size: 25px;
+  top: 37.5px;
+  right: 36px;
+}
+
+.menu {
+  height: auto;
+  margin-bottom: 10px;
+}
+.menu__title {
+  font-family: roboto;
+  font-weight: lighter;
+  font-size: 16px;
+  margin-left: 20px;
+  margin-top: 32px;
+  border-bottom: 3px solid #99E2D0;
+  width: 40px;
+  padding-bottom: 3px;
+}
+.menu__sticker__description {
+  text-decoration: none;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  border-radius: 15px;
+  box-shadow: #c3c3c3 0px 3px 20px;
+  margin: 0px 13px 11px 14px;
+  color: black;
+  font-weight: bold;
+}
+.menu__sticker__description__title {
+  font-family: roboto;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 11px 0px 4px 10px;
+}
+.menu__sticker__description__subtitle {
+  font-family: roboto;
+  font-weight: lighter;
+  font-size: 15px;
+  margin: 3px 0px 12px 10px;
+}
+.menu__sticker__description__price {
+  position: absolute;
+  font-family: roboto;
+  font-weight: bold;
+  right: 81px;
+  font-size: 14px;
+  top: 14px;
+}
+.menu__sticker__description__icon {
+  display: flex;
+  position: absolute;
+  background-color: #99E2D0;
+  right: 41px;
+  top: 25px;
+}
+.menu__sticker__description ::before {
+  position: absolute;
+  background-color: white;
+  color: #99E2D0;
+  font-size: 22.5px;
+}
+.menu__sweettitleadjustment {
+  margin-top: 45px;
+}
+.menu__commandbutton {
+  margin: 36px 94px 46px;
+  padding-left: 50px;
+  padding-right: 50px;
 }/*# sourceMappingURL=main.css.map */

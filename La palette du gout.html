@@ -3,148 +3,140 @@
     <head>
         <meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1"/>
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="sass/main.css" />
         <script src="https://kit.fontawesome.com/cdad57d0a6.js" crossorigin="anonymous"></script>
         <title>La palette du goût</title>
     </head>
 
-    <body>
-    	<header>
-            <div>
-                <i class="fas fa-arrow-left"></i>
-                <img src="sass/Base/images/ohmyfood@2x.svg" alt="ohmyfood" />
-            </div>
-            <div>
-                <h2>La palette du goût</h2>
-                <i class="far fa-heart"></i>
+    <body class="body">
+    	<header class="headermenu">
+            <i class="fas fa-arrow-left headermenu__icon"></i>
+            <h1 class="headermenu__logo">ohmyfood</h1>
+            <div >
+                <div class="headermenu__sticker"></div>
+                <div class="headermenu__description">
+                    <h3 class="headermenu__description__title">La palette du goût</h3>     
+                    <i class="far fa-heart"></i>
+                </div>
             </div>
         </header>
         <main>
-            <article>
-                <h1>ENTRÉES</h1>
-                <section>
-                    <a href="">
+            <section class="menu">
+                <h2 class="menu__title">ENTRÉES</h2>
+                <section class="menu__sticker" >
+                    <a href="" class="menu__sticker__description">
                         <div>
-                            <h2>Fricassée d'escargot</h2>
-                            <h3>Au piment d'Espelette</h3>
+                            <h3 class="menu__sticker__description__title">Fricassée d'escargot</h3>
+                            <h4 class="menu__sticker__description__subtitle">Au piment d'Espelette</h4>
                         </div>                   
-                        <h4>25€</h4>
-                        <div>
-                            <i class="far fa-check-circle"></i>
-                        </div>
+                        <h5 class="menu__sticker__description__price">25€</h5>
+                        <i class="far fa-check-circle menu__sticker__description__icon"></i>
                     </a>
                 </section>
-                <section>
-                    <a href="">
+                <section class="menu__sticker">
+                    <a href="" class="menu__sticker__description">
                         <div>
-                            <h2>Foie gras de canard mi-cuit</h2>
-                            <h3>Et ses copeaux de truffe noire</h3>
+                            <h3 class="menu__sticker__description__title">Foie gras de canard mi-cuit</h3>
+                            <h4 class="menu__sticker__description__subtitle">Et ses copeaux de truffe noire</h4>
                         </div>                   
-                        <h4>35€</h4>
-                        <div>
-                            <i class="far fa-check-circle"></i>
-                        </div>
+                        <h5 class="menu__sticker__description__price">35€</h5>
+                        <i class="far fa-check-circle menu__sticker__description__icon"></i>
                     </a>
                 </section>
-                <section>
-                    <a href="">
+                <section class="menu__sticker">
+                    <a href="" class="menu__sticker__description">
                         <div>
-                            <h2>Oeuf au plat</h2>
-                            <h3>Assaisonné à la truffe sur lit de caviar</h3>
+                            <h3 class="menu__sticker__description__title">Oeuf au plat</h3>
+                            <h4 class="menu__sticker__description__subtitle">Assaisonné à la truffe sur lit de caviar</h4>
                         </div>                   
-                        <h4>20€</h4>
-                        <div>
-                            <i class="far fa-check-circle"></i>
-                        </div>
+                        <h5 class="menu__sticker__description__price">20€</h5>
+                        <i class="far fa-check-circle menu__sticker__description__icon"></i>
                     </a>
-                </section>  
-            </article>
-            <article>
-                <h1>PLATS</h1>
-                <section>
-                    <a href="">
+                </section> 
+            </section>
+            <section class="menu">
+                <h2 class="menu__title">PLATS</h2>
+                <section class="menu__sticker">
+                    <a href="" class="menu__sticker__description">
                         <div>
-                            <h2>Filet de boeuf aux herbes</h2>
-                            <h3>Accompagné de sa ribambelle de légumes</h3>
+                            <h3 class="menu__sticker__description__title">Filet de boeuf aux herbes</h3>
+                            <h4 class="menu__sticker__description__subtitle">Accompagné de sa ribambelle de légumes</h4>
                         </div>                   
-                        <h4>40€</h4>
-                        <div>
-                            <i class="far fa-check-circle"></i>
-                        </div>
+                        <h5 class="menu__sticker__description__price">40€</h5>
+                        <i class="far fa-check-circle menu__sticker__description__icon"></i>
                     </a>
                 </section>
-                <section>
-                    <a href="">
+                <section class="menu__sticker">
+                    <a href="" class="menu__sticker__description">
                         <div>
-                            <h2>Parmentier de queue de boeuf</h2>
-                            <h3>À la truffe noire sur sa purée de panais</h3>
+                            <h3 class="menu__sticker__description__title">Parmentier de queue de boeuf</h3>
+                            <h4 class="menu__sticker__description__subtitle">À la truffe noire sur sa purée de panais</h4>
                         </div>                   
-                        <h4>35€</h4>
-                        <div>
-                            <i class="far fa-check-circle"></i>
-                        </div>
+                        <h5 class="menu__sticker__description__price">35€</h5>
+                        <i class="far fa-check-circle menu__sticker__description__icon"></i>
                     </a>
                 </section>
-                <section>
-                    <a href="">
+                <section class="menu__sticker">
+                    <a href="" class="menu__sticker__description">
                         <div>
-                            <h2>Filet de turbot</h2>
-                            <h3>Aux agrumes</h3>
+                            <h3 class="menu__sticker__description__title">Filet de turbot</h3>
+                            <h4 class="menu__sticker__description__subtitle">Aux agrumes</h4>
                         </div>                   
-                        <h4>44€</h4>
-                        <div>
-                            <i class="far fa-check-circle"></i>
-                        </div>
+                        <h5 class="menu__sticker__description__price">44€</h5>
+                        <i class="far fa-check-circle menu__sticker__description__icon"></i>
                     </a>
-                </section>  
-            </article>
-            <article>
-                <h1>DESSERTS</h1>
-                <section>
-                    <a href="">
+                </section> 
+            </section>
+            <section class="menu">
+                <h2 class="menu__title menu__sweettitleadjustment">DESSERTS</h2>
+                <section class="menu__sticker" >
+                    <a href="" class="menu__sticker__description">
                         <div>
-                            <h2>Paris-Brest</h2>
-                            <h3>Revisité</h3>
+                            <h3 class="menu__sticker__description__title">Paris-Brest</h3>
+                            <h4 class="menu__sticker__description__subtitle">Revisité</h4>
                         </div>                   
-                        <h4>18€</h4>
-                        <div>
-                            <i class="far fa-check-circle"></i>
-                        </div>
+                        <h5 class="menu__sticker__description__price">18€</h5>
+                        <i class="far fa-check-circle menu__sticker__description__icon"></i>
                     </a>
                 </section>
-                <section>
-                    <a href="">
+                <section class="menu__sticker" >
+                    <a href="" class="menu__sticker__description">
                         <div>
-                            <h2>Macaron au chocolat d'exception </h2>
-                            <h3>Et glace à la vanille de Madagascar</h3>
+                            <h3 class="menu__sticker__description__title">Macaron au chocolat d'exception</h3>
+                            <h4 class="menu__sticker__description__subtitle">Et glace à la vanille de Madagascar</h4>
                         </div>                   
-                        <h4>22€</h4>
-                        <div>
-                            <i class="far fa-check-circle"></i>
-                        </div>
+                        <h5 class="menu__sticker__description__price">22€</h5>
+                        <i class="far fa-check-circle menu__sticker__description__icon"></i>
                     </a>
                 </section>
-                <section>
-                    <a href="">
+                <section class="menu__sticker">
+                    <a href="" class="menu__sticker__description">
                         <div>
-                            <h2>Mousse au chocolat</h2>
-                            <h3>Au piment d'Espelette et à la truffe noire</h3>
+                            <h3 class="menu__sticker__description__title">Mousse au chocolat </h3>
+                            <h4 class="menu__sticker__description__subtitle">Au piment d'Espelette et à la truffe noire</h4>
                         </div>                   
-                        <h4>23€</h4>
-                        <div>
-                            <i class="far fa-check-circle"></i>
-                        </div>
-                    </a href="">
-                </section>  
-            </article>              
+                        <h5 class="menu__sticker__description__price">23€</h5>
+                        <i class="far fa-check-circle menu__sticker__description__icon"></i>
+                    </a>
+                </section>
+                <button class="header__button menu__commandbutton">Commander</button>
+            </section>             
         </main>
-        <footer>
-            <h1>ohmyfood</h1>
-            <ul>
-                <li class="fas fa-utensils"><a href="#Restaurants">Proposer un restaurant</a></li>
-                <li class="fas fa-hands-helping"><a href="">Devenir partenaire</a></li>
-                <li><a href="">Mentions légales</a></li>
-                <li><a href="">Contact</a></li>
+        <footer class="footer">
+            <h2 class="footer__title">ohmyfood</h2>
+            <ul class="footer__list" >
+                <li>
+                    <a href="#Restaurants" class="footer__list__links"><i class="fas fa-utensils"></iclass></i> Proposer un restaurant</a>
+                </li>
+                <li>
+                    <a href="" class="footer__list__links"><i class="fas fa-hands-helping "></i>Devenir partenaire</a>
+                </li>
+                <li class="footer__list__links">
+                    <a href="" class="footer__list__links">Mentions légales</a>
+                </li>
+                <li class="footer__list__links">
+                    <a href="" class="footer__list__links">Contact</a>
+                </li>
             </ul>
         </footer>
     </body>
