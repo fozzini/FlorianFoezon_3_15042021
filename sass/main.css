@@ -349,55 +349,69 @@
   width: 40px;
   padding-bottom: 3px;
 }
-.menu__sticker__description {
-  text-decoration: none;
-  position: relative;
+.menu__sticker {
   display: flex;
-  flex-direction: row;
-  border-radius: 15px;
+  justify-content: space-between;
   box-shadow: #c3c3c3 0px 3px 20px;
-  margin: 0px 13px 11px 14px;
+  margin: 0px 13px 13px 14px;
+  border-radius: 15px;
+  text-decoration: none;
   color: black;
-  font-weight: bold;
+}
+.menu__sticker__description {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
 }
 .menu__sticker__description__title {
   font-family: roboto;
   font-weight: bold;
   font-size: 18px;
   margin: 11px 0px 4px 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu__sticker__description__subtitle {
   font-family: roboto;
   font-weight: lighter;
-  font-size: 15px;
-  margin: 3px 0px 12px 10px;
+  font-size: 14px;
+  margin: 0px 0px 12px 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.menu__sticker__description__price {
-  position: absolute;
+.menu__sticker__price {
   font-family: roboto;
   font-weight: bold;
-  right: 81px;
-  font-size: 14px;
-  top: 14px;
+  font-size: 15px;
+  padding: 0px 23px 0px 25px;
+  background-color: white;
+  margin: 37px 0px 0px 0px;
+  width: 21%;
 }
-.menu__sticker__description__icon {
+.menu__sticker__icon {
   display: flex;
-  position: absolute;
+  position: relative;
   background-color: #99E2D0;
-  right: 41px;
-  top: 25px;
+  width: 16%;
+  border-radius: 0px 15px 15px 0px;
 }
-.menu__sticker__description ::before {
+.menu__sticker__icon ::before {
   position: absolute;
   background-color: white;
   color: #99E2D0;
-  font-size: 22.5px;
+  top: 25px;
+  right: 20px;
+  font-size: 12px;
+  padding: 4px;
+  border-radius: 25px;
 }
-.menu__sweettitleadjustment {
-  margin-top: 45px;
+.menu__sweet--adjustment {
+  margin-top: 44px;
 }
 .menu__commandbutton {
-  margin: 36px 94px 46px;
+  margin: 34px 94px 44px;
   padding-left: 50px;
   padding-right: 50px;
 }/*# sourceMappingURL=main.css.map */

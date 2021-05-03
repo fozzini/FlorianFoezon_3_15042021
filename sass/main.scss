@@ -364,60 +364,71 @@
   
     }
     &__sticker{
-
-        &__description{
-            text-decoration: none;
-            position: relative;
+        display: flex;
+        justify-content: space-between;
+        box-shadow: #c3c3c3 0px 3px 20px;
+        margin: 0px 13px 13px 14px;
+        border-radius: 15px;
+        text-decoration: none;
+              
+        color: black;
+        
+        &__description{ 
             display: flex;
-            flex-direction: row;
-            border-radius: 15px;
-            box-shadow: #c3c3c3 0px 3px 20px;
-            margin: 0px 13px 11px 14px;     
-            color: black;
-            font-weight: bold;
+            flex-direction: column;
+            width:60%;             
             &__title{
                 font-family: roboto;
                 font-weight: bold;
                 font-size: 18px;
                 margin:11px 0px 4px 10px;
-            
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;               
             }
             &__subtitle{
                 font-family: roboto;
                 font-weight: lighter;
-                font-size:15px;
-                margin:3px 0px 12px 10px;
-                
+                font-size:14px;
+                margin:0px 0px 12px 10px;
+                white-space: nowrap;
+                overflow:hidden;
+                text-overflow: ellipsis; 
             }
-            &__price{
-                position: absolute;
-                font-family: roboto;
-                font-weight: bold;
-                right:81px;
-                font-size: 14px;
-                top:14px;
-            }
-            &__icon{
-                display: flex;
-                position:absolute;
-                background-color: #99E2D0;
-                right: 41px;
-                top: 25px;
-                
-            }
+        }
+        &__price{
+            font-family: roboto;
+            font-weight: bold;
+            font-size: 15px;
+            padding: 0px 23px 0px 25px;
+            background-color: white;
+            margin:37px 0px 0px 0px;
+            width:21%;
+        }
+        &__icon{
+            display: flex;
+            position:relative;
+            background-color: #99E2D0;
+            width:16%;
+            border-radius: 0px 15px 15px 0px;
             ::before{
                 position: absolute;
                 background-color: white;
                 color:#99E2D0;
-                font-size: 22.5px;
-            }
-        }
+                top:25px;
+                right: 20px;
+                font-size: 12px;
+                padding: 4px;
+                border-radius: 25px;
+            }  
+        }    
     }
-    &__sweettitleadjustment{
-        margin-top: 45px;
-        }
+        
+    &__sweet--adjustment{
+        margin-top: 44px;
+                }
     &__commandbutton{
-        margin: 36px 94px 46px;
+        margin: 34px 94px 44px;
         padding-left: 50px;
         padding-right: 50px;
     }
