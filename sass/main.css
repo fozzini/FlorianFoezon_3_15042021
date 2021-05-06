@@ -123,6 +123,22 @@
     opacity: 0;
   }
 }
+@-webkit-keyframes checkrotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(361deg);
+  }
+}
+@keyframes checkrotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(361deg);
+  }
+}
 .body {
   margin: 0px;
   height: 100vh;
@@ -286,6 +302,7 @@
 .main__restaurants__sticker {
   text-decoration: none;
   display: flex;
+  height: auto;
   position: relative;
   flex-direction: column;
   background-color: white;
@@ -328,15 +345,15 @@
 .main__restaurants__sticker__description__icones--1 {
   position: absolute;
   z-index: 1;
-  font-size: 20px;
-  top: 27.3%;
-  right: 5.45%;
-  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  font-size: 1.5rem;
+  top: 26.3%;
+  right: 5.2%;
+  background-image: linear-gradient(to top, #FF79DA, #9356DC);
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
   background-position: 0 24px;
-  height: 19px;
+  height: 24px;
   background-repeat: no-repeat;
   transition: background-position 1s;
 }
@@ -344,9 +361,9 @@
   background-position: 0 0px;
 }
 .main__restaurants__sticker__description__icones--2 {
-  font-size: 24px;
-  top: 25%;
-  right: 5%;
+  font-size: 1.5rem;
+  top: 26.3%;
+  right: 5.2%;
   color: black;
   position: absolute;
 }
@@ -494,7 +511,7 @@
 .menu__sticker__description {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 85%;
 }
 .menu__sticker__description__title {
   font-family: roboto;
@@ -516,29 +533,40 @@
 }
 .menu__sticker__price {
   font-family: roboto;
+  justify-items: center;
   font-weight: bold;
   font-size: 15px;
-  padding: 0px 23px 0px 25px;
   background-color: white;
-  margin: 37px 0px 0px 0px;
-  width: 21%;
+  width: 14%;
 }
 .menu__sticker__icon {
   display: flex;
-  position: relative;
   background-color: #99E2D0;
-  width: 16%;
+  width: 0%;
   border-radius: 0px 15px 15px 0px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: width 1s ease-in-out;
 }
-.menu__sticker__icon ::before {
-  position: absolute;
+.menu__sticker__icon__check {
   background-color: white;
   color: #99E2D0;
-  top: 25px;
-  right: 20px;
   font-size: 12px;
   padding: 4px;
   border-radius: 25px;
+}
+.menu__sticker:hover .menu__sticker__price {
+  width: 5%;
+}
+.menu__sticker:hover .menu__sticker__icon {
+  width: 10%;
+}
+.menu__sticker:hover .menu__sticker__icon__check {
+  -webkit-animation: checkrotation 1s ease-in-out;
+          animation: checkrotation 1s ease-in-out;
+  font-size: 12px;
+  padding: 4px;
 }
 .menu__sweet--adjustment {
   margin-top: 44px;

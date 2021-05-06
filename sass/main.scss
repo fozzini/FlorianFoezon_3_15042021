@@ -79,6 +79,14 @@ $--gradient: linear-gradient(90deg,white,$cd-primary,$cd-secondary);
         opacity:0;
     }
 }
+@keyframes checkrotation {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(361deg);
+    }
+}
 .body{
     margin: 0px;
     height: 100vh;
@@ -239,6 +247,7 @@ $--gradient: linear-gradient(90deg,white,$cd-primary,$cd-secondary);
         &__sticker{
             text-decoration: none;
             display: flex;
+            height:auto;
             position: relative;
             flex-direction: column;
             background-color: white;
@@ -277,33 +286,29 @@ $--gradient: linear-gradient(90deg,white,$cd-primary,$cd-secondary);
                 border-top: none;
                 padding: 0px 10px 13px 10px;
                 position: relative;
-                
-                
-        
                 &__icones--1{
                     position: absolute;
                     z-index: 1;
-                    font-size: 20px;
-                    top:27.3%;
-                    right:5.45%;
-                    background-image: linear-gradient(to top,$cd-primary,$cd-secondary);
+                    font-size: 1.5rem;
+                    top:26.3%;                                                                                                                            
+                    right:5.2%;
+                    background-image: linear-gradient(to top,$cd-secondary,$cd-primary);
                     background-clip: text;
                     color: transparent;
                     background-position: 0 24px;
-                    height: 19px;
+                    height: 24px;
                     background-repeat: no-repeat;
-                    transition: background-position 1s;                    
+                    transition: background-position 1s;        
                     &:hover{
-                        background-position: 0 0px;
+                        background-position: 0 0px;    
                     }
                 }
                 &__icones--2{
-                    font-size: 24px;
-                    top:25%;
-                    right:5%;
+                    font-size: 1.5rem;
+                    top:26.3%;
+                    right:5.2%;
                     color:black;
-                    position:absolute;
-                    
+                    position:absolute;   
                 }
             }
             &__lapalette{
@@ -341,7 +346,6 @@ $--gradient: linear-gradient(90deg,white,$cd-primary,$cd-secondary);
         }
     }  
 }
-
 .footer{
     height: auto;
     background-color: darken($cd-grey, 50%);
@@ -447,13 +451,15 @@ $--gradient: linear-gradient(90deg,white,$cd-primary,$cd-secondary);
         margin: 0px 13px 13px 14px;
         border-radius: 15px;
         text-decoration: none;
-            
         color: black;
+        
         
         &__description{ 
             display: flex;
             flex-direction: column;
-            width:60%;             
+            width:85%;
+            
+                         
             &__title{
                 font-family: roboto;
                 font-weight: bold;
@@ -475,30 +481,45 @@ $--gradient: linear-gradient(90deg,white,$cd-primary,$cd-secondary);
         }
         &__price{
             font-family: roboto;
+            justify-items:center ;
             font-weight: bold;
             font-size: 15px;
-            padding: 0px 23px 0px 25px;
             background-color: white;
-            margin:37px 0px 0px 0px;
-            width:21%;
+            width:14%;
+            
         }
         &__icon{
             display: flex;
-            position:relative;
             background-color: $cd-tertiary;
-            width:16%;
+            width:0%;
             border-radius: 0px 15px 15px 0px;
-            ::before{
-                position: absolute;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            transition:width 1s ease-in-out;
+            &__check{
                 background-color: white;
                 color:$cd-tertiary;
-                top:25px;
-                right: 20px;
                 font-size: 12px;
                 padding: 4px;
                 border-radius: 25px;
+            }
+        }
+        &:hover{
+            
+            .menu__sticker__price{
+                width:5%;
+            }
+            .menu__sticker__icon{
+                width:10%;
+                &__check{
+                    animation:checkrotation 1s ease-in-out;
+                    font-size: 12px;
+                    padding: 4px;
+                    
+                }
             }  
-        }    
+        }        
     }
         
     &__sweet--adjustment{
