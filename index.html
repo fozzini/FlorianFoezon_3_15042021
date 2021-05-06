@@ -7,8 +7,16 @@
         <script src="https://kit.fontawesome.com/cdad57d0a6.js" crossorigin="anonymous"></script>
         <title>Acceuil</title>
     </head>
-
+    
     <body class="body">
+        <div class="loader">
+            <i class="fas fa-utensils"></i>
+            <span class="loader__ripple--1"></span>
+            <span class="loader__ripple--2"></span>
+            <span class="loader__ripple--3"></span>
+            <span class="loader__ripple--4"></span>
+            <span class="loader__ripple--5"></span>
+        </div>
     	<header class="header">
             <div class="header__logo">
                 <h1>ohmyfood</h1>
@@ -17,9 +25,8 @@
                 <label for="recherche" class="header__searchbar__icon"><i class="fas fa-map-marker-alt"></i></label>
                 <input type="search" id="recherche" value="Paris, Belleville" class="header__searchbar__input">
             </div>
-            <h2 class="header__title">Réservez le menu qui<br>vous convient</h2>
-            <h3 class="header__subtitle {
-                ">Découvrez des restaurants d'exception, sélectionnés par nos soins.</h3>
+            <h2 class="header__title">Réservez le menu qui vous convient</h2>
+            <h3 class="header__subtitle">Découvrez des restaurants d'exception, sélectionnés par nos soins.</h3>
             <button class="header__button">Explorer nos restaurants</button>
         </header>
         <main class="main">
@@ -35,34 +42,38 @@
             </section>
             <section id="Restaurants" class="main__restaurants">
                 <h2 class="main__restaurants__title">Restaurants</h2>
-                <a href="La palette du gout.html" class="main__restaurants__sticker">
+                <a href="La_palette_du_gout.html" class="main__restaurants__sticker">
                     <div class="main__restaurants__sticker__lapalette"></div>
                     <div class="main__restaurants__sticker__description">
-                        <i class="far fa-heart"></i>
+                        <i class="fas fa-heart main__restaurants__sticker__description__icones--1"></i>
+                        <i class="far fa-heart main__restaurants__sticker__description__icones--2"></i>
                         <h3 class="main__restaurants__sticker__title">La palette du goût</h3>
                         <h4 class="main__restaurants__sticker__subtitle">Ménilmontant</h4>
                     </div>          
                 </a>
-                <a href="La note enchantee.html" class="main__restaurants__sticker">
+                <a href="La_note_enchantee.html" class="main__restaurants__sticker">
                     <div class="main__restaurants__sticker__lanote"></div>
                     <div class="main__restaurants__sticker__description">
-                        <i class="far fa-heart"></i>
+                        <i class="fas fa-heart main__restaurants__sticker__description__icones--1"></i>
+                        <i class="far fa-heart main__restaurants__sticker__description__icones--2"></i>
                         <h3 class="main__restaurants__sticker__title">La note enchantée</h3>
                         <h4 class="main__restaurants__sticker__subtitle">Charonne</h4>
                     </div>
                 </a>
-                <a href="A la francaise.html" class="main__restaurants__sticker">
+                <a href="A_la_francaise.html" class="main__restaurants__sticker">
                     <div class="main__restaurants__sticker__franc"></div>
                     <div class="main__restaurants__sticker__description">
-                        <i class="far fa-heart"></i>
+                        <i class="fas fa-heart main__restaurants__sticker__description__icones--1"></i>
+                        <i class="far fa-heart main__restaurants__sticker__description__icones--2"></i>
                         <h3 class="main__restaurants__sticker__title">À la française</h3>
                         <h4 class="main__restaurants__sticker__subtitle">Cité Rouge</h4>
                     </div>
                 </a>
-                <a href="le delice des sens.html" class="main__restaurants__sticker">
+                <a href="le_delice_des_sens.html" class="main__restaurants__sticker">
                     <div class="main__restaurants__sticker__delice"></div>
                     <div class="main__restaurants__sticker__description">
-                        <i class="far fa-heart"></i>
+                        <i class="fas fa-heart main__restaurants__sticker__description__icones--1"></i>
+                        <i class="far fa-heart main__restaurants__sticker__description__icones--2"></i>
                         <h3 class="main__restaurants__sticker__title">Le délice des sens</h3>
                         <h4 class="main__restaurants__sticker__subtitle">Folie-Méricourt</h4>  
                     </div>
@@ -82,7 +93,7 @@
                     <a href="" class="footer__list__links">Mentions légales</a>
                 </li>
                 <li class="footer__list__links">
-                    <a href="" class="footer__list__links">Contact</a>
+                    <a href="mailto:contact@example.com" class="footer__list__links">Contact</a>
                 </li>
             </ul>
         </footer>

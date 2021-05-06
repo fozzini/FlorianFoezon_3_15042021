@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'shrikhand';
     src: url('shrikhand-regular-webfont.eot');
-    src: url('/sass/Base/font/Shrikhand/shrikhand-regular-webfont.ttf') format('embedded-opentype'),
-         url('/sass/Base/font/Shrikhand/shrikhand-regular-webfont.woff2') format('woff2'),
-         url('/sass/Base/font/Shrikhand/shrikhand-regular-webfont.woff') format('woff'),
-         url('/sass/Base/font/Shrikhand/shrikhand-regular-webfont.ttf') format('truetype'),
-         url('/sass/Base/font/Shrikhand/shrikhand-regular-webfont.svg#shrikhandregular') format('svg');
+    src: url('/font/Shrikhand/shrikhand-regular-webfont.ttf') format('embedded-opentype'),
+         url('/font/Shrikhand/shrikhand-regular-webfont.woff2') format('woff2'),
+         url('/font/Shrikhand/shrikhand-regular-webfont.woff') format('woff'),
+         url('/font/Shrikhand/shrikhand-regular-webfont.ttf') format('truetype'),
+         url('/font/Shrikhand/shrikhand-regular-webfont.svg#shrikhandregular') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -13,39 +13,97 @@
 
 @font-face {
     font-family: 'roboto';
-    src: url('/sass/Base/font/roboto/roboto-regular-webfont.eot');
-    src: url('/sass/Base/font/roboto/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/sass/Base/font/roboto/roboto-regular-webfont.woff2') format('woff2'),
-         url('/sass/Base/font/roboto/roboto-regular-webfont.woff') format('woff'),
-         url('/sass/Base/font/roboto/roboto-regular-webfont.ttf') format('truetype'),
-         url('/sass/Base/font/roboto/roboto-regular-webfont.svg#robotoregular') format('svg');
+    src: url('/font/roboto/roboto-regular-webfont.eot');
+    src: url('/font/roboto/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/font/roboto/roboto-regular-webfont.woff2') format('woff2'),
+         url('/font/roboto/roboto-regular-webfont.woff') format('woff'),
+         url('/font/roboto/roboto-regular-webfont.ttf') format('truetype'),
+         url('/font/roboto/roboto-regular-webfont.svg#robotoregular') format('svg');
     font-weight: normal;
     font-style: normal;
+}
 
+$num-ripple: 5;
+$anim-dur: 3s;
+$anim-delay: -0.6s;
+$cd-primary:#9356DC;
+$cd-secondary:#FF79DA;
+$cd-tertiary:#99E2D0;
+$cd-grey:#eaeaea;
+$--gradient: linear-gradient(90deg,white,$cd-primary,$cd-secondary);
+
+.loader{  
+    position: absolute;
+    background: $cd-primary; 
+    min-height:100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 200%;
+    color: $cd-secondary ;
+    z-index: +1;
+    animation:exitloader $anim-dur forwards 1;
+    &__ripple{ 
+        @for $i from 1 through $num-ripple {
+            &--#{$i} {
+                position: absolute;
+                box-sizing: border-box;
+                border: 1px solid $cd-tertiary;
+                box-shadow: 0px 5px 18px -3px $cd-tertiary;
+                border-radius: 50%;
+                animation: animate $anim-dur linear 2;
+                animation-delay: $anim-delay * $i;
+            }
+        }
+    }    
+}
+@keyframes animate {
+    0%{
+        width: 70px;
+        height: 70px;
+        opacity: 1;
+    }
+    
+    100%{
+        width: 100vh;
+        height: 100vh;
+        opacity:0;
+    }      
+}
+@keyframes exitloader {
+    90%{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+    }
 }
 .body{
     margin: 0px;
-    height: auto;
+    height: 100vh;
+    width: auto;
+    position: relative;
 }
 .header{
     display: flex;
     flex-direction: column;
     height:auto;
-    background-color:#f6f6f6;
+    background-color:white;
     padding-bottom: 55px;
     &__logo{
-      height:63px;
-      text-align: center;
-      h1{
-          font-family:Shrikhand;
-          font-size:30px ;
-      }
-    } 
+    height:63px;
+    text-align: center;
+        h1{
+            font-family:Shrikhand;
+            font-size:30px ;
+        }
+    }
     &__searchbar{
         border:hidden;
         display: flex;
-        background-color:#eaeaea;
-        box-shadow: inset 0px 5px 5px 0px #c0c0c0;
+        background-color:$cd-grey;
+        box-shadow: inset 0px 5px 5px 0px darken($cd-grey, 10%);
         justify-content:center;
         padding-top: 13px;
         padding-bottom:13px;
@@ -59,7 +117,7 @@
             font-weight: bold;
             font-size: medium;
             border-style: none;
-            background-color:#eaeaea;
+            background-color:$cd-grey;
         }
     }
     &__title{
@@ -78,12 +136,11 @@
         margin-left: 2%;
         text-align: center;
     }
-
     &__button {
         width:auto;
-        box-shadow: 0px 5px 18px -3px #899599;
-        background:linear-gradient(175deg, #FF79DA 5%, #9356DC 100%);
-        background-color:#FF79DA;
+        box-shadow: 0px 5px 18px -3px darken($cd-grey, 30%);
+        background:linear-gradient(175deg, $cd-secondary 5%,$cd-primary 100%);
+        background-color:$cd-secondary;
         border: none;
         border-radius:35px;
         display:inline-block;
@@ -95,11 +152,10 @@
         margin-top:11px;
         margin: 3% 20% 0% 22%;
         text-decoration:none;
-    
-        
         &:hover {
-            background:linear-gradient(175deg, #9356DC 5%, #FF79DA 100%);
-            background-color:#9356DC;
+            background:linear-gradient(175deg,$cd-primary 5%, $cd-secondary 100%);
+            background-color:$cd-primary;
+            box-shadow: 0px 5px 22px -3px darken($cd-grey, 50%);
         }
         &:active {
             position:relative;
@@ -109,7 +165,6 @@
 }
 .main{
     height: auto;
-    
     &__services{
         display: flex;
         flex-direction: column;
@@ -131,9 +186,9 @@
                 font-family: roboto;
                 font-weight: bold;
                 color: black;
-                background-color: #f6f6f6;
+                background-color: white;
                 border-radius: 18px;
-                box-shadow: #c3c3c3 0px 3px 20px;
+                box-shadow: 0px 5px 18px -3px darken($cd-grey, 30%);
                 padding: 20px 0px 15px 15px;
                 position: relative;  
                 &::before {
@@ -142,7 +197,7 @@
                     position:absolute;
                     display: flex;
                     list-style-type: decimal;
-                    background-color: #9356DC;
+                    background-color:$cd-primary;
                     border-radius: 45px;
                     font-size: 15px;
                     font-family: roboto;
@@ -156,21 +211,24 @@
                 &__icons{
                     margin: 0px 21px 10px 19px;
                     font-size: 20px;
-                    color:grey;
+                    color:darken($cd-grey, 10%);
                 }
                 &:hover{
+                    box-shadow: 0px 5px 22px -3px darken($cd-grey, 50%);
+                    background-color: lighten($cd-primary, 35%);
                     i{
-                        color:#9356DC; 
+                        color:$cd-primary; 
                     }   
                 }   
                 &:active{
-                    background-color: #f5edff;
                     top:1px;
                 } 
             }  
         }
-    }&__restaurants{
-        background-color: #f6f6f6;
+    }
+
+    &__restaurants{
+        background-color: white;
         padding-bottom: 44px;
         height: auto;
         &__title{
@@ -180,21 +238,20 @@
         }
         &__sticker{
             text-decoration: none;
-            height: auto;
             display: flex;
             position: relative;
             flex-direction: column;
             background-color: white;
-            height: auto;
             border-radius: 18px;
-            box-shadow: #c3c3c3 0px 3px 20px;
+            box-shadow: 0px 5px 18px -3px darken($cd-grey, 30%);
             margin:0px 20px 20px 20px;
+        
             &::before{
                 content: "Nouveau";
                 position:absolute;
                 font-family: roboto;
-                background-color: #99E2D0;
-                color:#008766;
+                background-color: $cd-tertiary;
+                color:darken($cd-tertiary, 35%);
                 right:12px;
                 top:12px;
                 padding:5px 12px 5px 12px;
@@ -220,16 +277,37 @@
                 border-top: none;
                 padding: 0px 10px 13px 10px;
                 position: relative;
-                i{
-                    font-size: 25px;
+                
+                
+        
+                &__icones--1{
+                    position: absolute;
+                    z-index: 1;
+                    font-size: 20px;
+                    top:27.3%;
+                    right:5.45%;
+                    background-image: linear-gradient(to top,$cd-primary,$cd-secondary);
+                    background-clip: text;
+                    color: transparent;
+                    background-position: 0 24px;
+                    height: 19px;
+                    background-repeat: no-repeat;
+                    transition: background-position 1s;                    
+                    &:hover{
+                        background-position: 0 0px;
+                    }
+                }
+                &__icones--2{
+                    font-size: 24px;
+                    top:25%;
+                    right:5%;
                     color:black;
                     position:absolute;
-                    top: 20px;
-                    left:287px;
+                    
                 }
             }
             &__lapalette{
-                background-image: url(/sass/Base/images/restaurants/jay-wennington.jpg);
+                background-image: url(/images/restaurants/jay-wennington.jpg);
                 background-repeat: no-repeat;
                 background-position:bottom;
                 background-size:cover;
@@ -237,7 +315,7 @@
                 border-radius: 15px 15px 0px 0px;
             }
             &__lanote{
-                background-image: url(/sass/Base/images/restaurants/stil.jpg);
+                background-image: url(/images/restaurants/stil.jpg);
                 background-repeat: no-repeat;
                 background-position:bottom;
                 background-size:cover;
@@ -245,7 +323,7 @@
                 border-radius: 15px 15px 0px 0px;
             }
             &__franc{
-                background-image: url(/sass/Base/images/restaurants/toa-heftiba.jpg);
+                background-image: url(/images/restaurants/toa-heftiba.jpg);
                 background-repeat: no-repeat;
                 background-position:bottom;
                 background-size:cover;
@@ -253,19 +331,20 @@
                 border-radius: 15px 15px 0px 0px;
             }
             &__delice{
-                background-image: url(/sass/Base/images/restaurants/louis-hansel-shotsoflouis.jpg);
+                background-image: url(/images/restaurants/louis-hansel-shotsoflouis.jpg);
                 background-repeat: no-repeat;
                 background-position:bottom;
                 background-size:cover;
                 padding: 26%;
                 border-radius: 15px 15px 0px 0px;
             }
-        }  
-    }
+        }
+    }  
 }
+
 .footer{
     height: auto;
-    background-color: #353535;
+    background-color: darken($cd-grey, 50%);
     color:white;
     padding-bottom: 12px;
     &__title{
@@ -290,17 +369,15 @@
             text-decoration: none;
             font-size:16px;
             margin-top: 5px;
-            margin-bottom: 0px;
-            
-        }
+            margin-bottom: 0px;  
             i{
                 margin-right: 6px;
                 font-size: 12px;
             }
+        }
     }
-    
-
-}.headermenu{
+}
+.headermenu{
     display: flex;
     flex-direction: column;
     &__logo{
@@ -318,7 +395,7 @@
         left: 24px;
     }
     &__sticker{
-        background-image: url(/sass/Base/images/restaurants/jay-wennington.jpg);
+        background-image: url(/images/restaurants/jay-wennington.jpg);
         background-repeat: no-repeat;
         background-position:top;
         background-size:cover;
@@ -358,19 +435,19 @@
         font-size: 16px;
         margin-left:20px;
         margin-top:32px;
-        border-bottom:3px solid #99E2D0 ;
+        border-bottom:3px solid $cd-tertiary ;
         width: 40px;
         padding-bottom: 3px;
-  
+
     }
     &__sticker{
         display: flex;
         justify-content: space-between;
-        box-shadow: #c3c3c3 0px 3px 20px;
+        box-shadow: 0px 5px 18px -3px darken($cd-grey, 30%);
         margin: 0px 13px 13px 14px;
         border-radius: 15px;
         text-decoration: none;
-              
+            
         color: black;
         
         &__description{ 
@@ -408,13 +485,13 @@
         &__icon{
             display: flex;
             position:relative;
-            background-color: #99E2D0;
+            background-color: $cd-tertiary;
             width:16%;
             border-radius: 0px 15px 15px 0px;
             ::before{
                 position: absolute;
                 background-color: white;
-                color:#99E2D0;
+                color:$cd-tertiary;
                 top:25px;
                 right: 20px;
                 font-size: 12px;
@@ -426,7 +503,7 @@
         
     &__sweet--adjustment{
         margin-top: 44px;
-                }
+    }
     &__commandbutton{
         margin: 34px 94px 44px;
         padding-left: 50px;

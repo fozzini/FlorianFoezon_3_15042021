@@ -1,27 +1,140 @@
 @font-face {
   font-family: "shrikhand";
   src: url("shrikhand-regular-webfont.eot");
-  src: url("/sass/Base/font/Shrikhand/shrikhand-regular-webfont.ttf") format("embedded-opentype"), url("/sass/Base/font/Shrikhand/shrikhand-regular-webfont.woff2") format("woff2"), url("/sass/Base/font/Shrikhand/shrikhand-regular-webfont.woff") format("woff"), url("/sass/Base/font/Shrikhand/shrikhand-regular-webfont.ttf") format("truetype"), url("/sass/Base/font/Shrikhand/shrikhand-regular-webfont.svg#shrikhandregular") format("svg");
+  src: url("/font/Shrikhand/shrikhand-regular-webfont.ttf") format("embedded-opentype"), url("/font/Shrikhand/shrikhand-regular-webfont.woff2") format("woff2"), url("/font/Shrikhand/shrikhand-regular-webfont.woff") format("woff"), url("/font/Shrikhand/shrikhand-regular-webfont.ttf") format("truetype"), url("/font/Shrikhand/shrikhand-regular-webfont.svg#shrikhandregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "roboto";
-  src: url("/sass/Base/font/roboto/roboto-regular-webfont.eot");
-  src: url("/sass/Base/font/roboto/roboto-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/sass/Base/font/roboto/roboto-regular-webfont.woff2") format("woff2"), url("/sass/Base/font/roboto/roboto-regular-webfont.woff") format("woff"), url("/sass/Base/font/roboto/roboto-regular-webfont.ttf") format("truetype"), url("/sass/Base/font/roboto/roboto-regular-webfont.svg#robotoregular") format("svg");
+  src: url("/font/roboto/roboto-regular-webfont.eot");
+  src: url("/font/roboto/roboto-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/font/roboto/roboto-regular-webfont.woff2") format("woff2"), url("/font/roboto/roboto-regular-webfont.woff") format("woff"), url("/font/roboto/roboto-regular-webfont.ttf") format("truetype"), url("/font/roboto/roboto-regular-webfont.svg#robotoregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
+.loader {
+  position: absolute;
+  background: #9356DC;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 200%;
+  color: #FF79DA;
+  z-index: 1;
+  -webkit-animation: exitloader 3s forwards 1;
+          animation: exitloader 3s forwards 1;
+}
+.loader__ripple--1 {
+  position: absolute;
+  box-sizing: border-box;
+  border: 1px solid #99E2D0;
+  box-shadow: 0px 5px 18px -3px #99E2D0;
+  border-radius: 50%;
+  -webkit-animation: animate 3s linear 2;
+          animation: animate 3s linear 2;
+  -webkit-animation-delay: -0.6s;
+          animation-delay: -0.6s;
+}
+.loader__ripple--2 {
+  position: absolute;
+  box-sizing: border-box;
+  border: 1px solid #99E2D0;
+  box-shadow: 0px 5px 18px -3px #99E2D0;
+  border-radius: 50%;
+  -webkit-animation: animate 3s linear 2;
+          animation: animate 3s linear 2;
+  -webkit-animation-delay: -1.2s;
+          animation-delay: -1.2s;
+}
+.loader__ripple--3 {
+  position: absolute;
+  box-sizing: border-box;
+  border: 1px solid #99E2D0;
+  box-shadow: 0px 5px 18px -3px #99E2D0;
+  border-radius: 50%;
+  -webkit-animation: animate 3s linear 2;
+          animation: animate 3s linear 2;
+  -webkit-animation-delay: -1.8s;
+          animation-delay: -1.8s;
+}
+.loader__ripple--4 {
+  position: absolute;
+  box-sizing: border-box;
+  border: 1px solid #99E2D0;
+  box-shadow: 0px 5px 18px -3px #99E2D0;
+  border-radius: 50%;
+  -webkit-animation: animate 3s linear 2;
+          animation: animate 3s linear 2;
+  -webkit-animation-delay: -2.4s;
+          animation-delay: -2.4s;
+}
+.loader__ripple--5 {
+  position: absolute;
+  box-sizing: border-box;
+  border: 1px solid #99E2D0;
+  box-shadow: 0px 5px 18px -3px #99E2D0;
+  border-radius: 50%;
+  -webkit-animation: animate 3s linear 2;
+          animation: animate 3s linear 2;
+  -webkit-animation-delay: -3s;
+          animation-delay: -3s;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    width: 70px;
+    height: 70px;
+    opacity: 1;
+  }
+  100% {
+    width: 100vh;
+    height: 100vh;
+    opacity: 0;
+  }
+}
+
+@keyframes animate {
+  0% {
+    width: 70px;
+    height: 70px;
+    opacity: 1;
+  }
+  100% {
+    width: 100vh;
+    height: 100vh;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes exitloader {
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes exitloader {
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .body {
   margin: 0px;
-  height: auto;
+  height: 100vh;
+  width: auto;
+  position: relative;
 }
 
 .header {
   display: flex;
   flex-direction: column;
   height: auto;
-  background-color: #f6f6f6;
+  background-color: white;
   padding-bottom: 55px;
 }
 .header__logo {
@@ -36,7 +149,7 @@
   border: hidden;
   display: flex;
   background-color: #eaeaea;
-  box-shadow: inset 0px 5px 5px 0px #c0c0c0;
+  box-shadow: inset 0px 5px 5px 0px #d1d1d1;
   justify-content: center;
   padding-top: 13px;
   padding-bottom: 13px;
@@ -71,7 +184,7 @@
 }
 .header__button {
   width: auto;
-  box-shadow: 0px 5px 18px -3px #899599;
+  box-shadow: 0px 5px 18px -3px #9e9e9e;
   background: linear-gradient(175deg, #FF79DA 5%, #9356DC 100%);
   background-color: #FF79DA;
   border: none;
@@ -89,6 +202,7 @@
 .header__button:hover {
   background: linear-gradient(175deg, #9356DC 5%, #FF79DA 100%);
   background-color: #9356DC;
+  box-shadow: 0px 5px 22px -3px #6b6b6b;
 }
 .header__button:active {
   position: relative;
@@ -121,9 +235,9 @@
   font-family: roboto;
   font-weight: bold;
   color: black;
-  background-color: #f6f6f6;
+  background-color: white;
   border-radius: 18px;
-  box-shadow: #c3c3c3 0px 3px 20px;
+  box-shadow: 0px 5px 18px -3px #9e9e9e;
   padding: 20px 0px 15px 15px;
   position: relative;
 }
@@ -147,17 +261,20 @@
 .main__services__ordertype__list__icons {
   margin: 0px 21px 10px 19px;
   font-size: 20px;
-  color: grey;
+  color: #d1d1d1;
+}
+.main__services__ordertype__list:hover {
+  box-shadow: 0px 5px 22px -3px #6b6b6b;
+  background-color: #f2eafb;
 }
 .main__services__ordertype__list:hover i {
   color: #9356DC;
 }
 .main__services__ordertype__list:active {
-  background-color: #f5edff;
   top: 1px;
 }
 .main__restaurants {
-  background-color: #f6f6f6;
+  background-color: white;
   padding-bottom: 44px;
   height: auto;
 }
@@ -168,14 +285,12 @@
 }
 .main__restaurants__sticker {
   text-decoration: none;
-  height: auto;
   display: flex;
   position: relative;
   flex-direction: column;
   background-color: white;
-  height: auto;
   border-radius: 18px;
-  box-shadow: #c3c3c3 0px 3px 20px;
+  box-shadow: 0px 5px 18px -3px #9e9e9e;
   margin: 0px 20px 20px 20px;
 }
 .main__restaurants__sticker::before {
@@ -183,7 +298,7 @@
   position: absolute;
   font-family: roboto;
   background-color: #99E2D0;
-  color: #008766;
+  color: #2c9c81;
   right: 12px;
   top: 12px;
   padding: 5px 12px 5px 12px;
@@ -210,15 +325,33 @@
   padding: 0px 10px 13px 10px;
   position: relative;
 }
-.main__restaurants__sticker__description i {
-  font-size: 25px;
+.main__restaurants__sticker__description__icones--1 {
+  position: absolute;
+  z-index: 1;
+  font-size: 20px;
+  top: 27.3%;
+  right: 5.45%;
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  background-position: 0 24px;
+  height: 19px;
+  background-repeat: no-repeat;
+  transition: background-position 1s;
+}
+.main__restaurants__sticker__description__icones--1:hover {
+  background-position: 0 0px;
+}
+.main__restaurants__sticker__description__icones--2 {
+  font-size: 24px;
+  top: 25%;
+  right: 5%;
   color: black;
   position: absolute;
-  top: 20px;
-  left: 287px;
 }
 .main__restaurants__sticker__lapalette {
-  background-image: url(/sass/Base/images/restaurants/jay-wennington.jpg);
+  background-image: url(/images/restaurants/jay-wennington.jpg);
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
@@ -226,7 +359,7 @@
   border-radius: 15px 15px 0px 0px;
 }
 .main__restaurants__sticker__lanote {
-  background-image: url(/sass/Base/images/restaurants/stil.jpg);
+  background-image: url(/images/restaurants/stil.jpg);
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
@@ -234,7 +367,7 @@
   border-radius: 15px 15px 0px 0px;
 }
 .main__restaurants__sticker__franc {
-  background-image: url(/sass/Base/images/restaurants/toa-heftiba.jpg);
+  background-image: url(/images/restaurants/toa-heftiba.jpg);
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
@@ -242,7 +375,7 @@
   border-radius: 15px 15px 0px 0px;
 }
 .main__restaurants__sticker__delice {
-  background-image: url(/sass/Base/images/restaurants/louis-hansel-shotsoflouis.jpg);
+  background-image: url(/images/restaurants/louis-hansel-shotsoflouis.jpg);
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
@@ -252,7 +385,7 @@
 
 .footer {
   height: auto;
-  background-color: #353535;
+  background-color: #6b6b6b;
   color: white;
   padding-bottom: 12px;
 }
@@ -280,7 +413,7 @@
   margin-top: 5px;
   margin-bottom: 0px;
 }
-.footer__list i {
+.footer__list__links i {
   margin-right: 6px;
   font-size: 12px;
 }
@@ -304,7 +437,7 @@
   left: 24px;
 }
 .headermenu__sticker {
-  background-image: url(/sass/Base/images/restaurants/jay-wennington.jpg);
+  background-image: url(/images/restaurants/jay-wennington.jpg);
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
@@ -352,7 +485,7 @@
 .menu__sticker {
   display: flex;
   justify-content: space-between;
-  box-shadow: #c3c3c3 0px 3px 20px;
+  box-shadow: 0px 5px 18px -3px #9e9e9e;
   margin: 0px 13px 13px 14px;
   border-radius: 15px;
   text-decoration: none;
