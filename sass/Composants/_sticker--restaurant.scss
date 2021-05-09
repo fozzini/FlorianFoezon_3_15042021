@@ -1,0 +1,42 @@
+.sticker--restaurant{
+    text-decoration: none;
+    display: flex;
+    height:auto;
+    position: relative;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 18px;
+    box-shadow: 0px 5px 18px -3px darken($cd-grey, 30%);
+    margin:0px 20px 20px 20px;
+    &__image{
+        background-position:bottom;
+        padding: 26%;
+        border-radius: 15px 15px 0px 0px;
+    }
+    &__description{
+        border-radius: 0px 0px 15px 15px;
+        border-top: none;
+        padding: 0px 10px 13px 10px;
+        position: relative;
+        &__title{
+            font-family: roboto;
+            font-weight: bold;
+            font-size: 18px;
+            color: black;
+            margin:11px 10px 5px 2px;
+        }
+        &__subtitle{
+            font-family: roboto;
+            font-weight: lighter;
+            font-size: 16.5px;
+            color: black;
+            margin:0px 0px 0px 4px;
+        }
+    }
+    @media all and (min-width: 768px){
+        width: 46%; 
+    }
+    @media all and (min-width: 1200px){
+        width: 20%; 
+    }
+}

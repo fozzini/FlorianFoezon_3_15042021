@@ -1,0 +1,20 @@
+.menu{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-bottom:10px;
+    &__title{
+        font-family: roboto;
+        font-weight: lighter;
+        font-size: 16px;
+        margin-left:20px;
+        margin-top:32px;
+        border-bottom:3px solid $cd-tertiary ;
+        width: 40px;
+        padding-bottom: 3px;
+
+    }
+    &__sweet--adjustment{
+        margin-top: 44px;
+    }
+}

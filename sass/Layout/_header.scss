@@ -1,0 +1,25 @@
+.header{
+    display: flex;
+    flex-direction: column;
+    height:auto;
+    background-color:white;
+    padding-bottom: 55px;
+    
+    
+    &__title{
+        font-family: roboto;
+        font-size:24px;
+        text-align: center;
+        margin-top:35px;
+        margin-right:5%;
+        margin-bottom: 0px;
+    }
+    &__subtitle{
+        font-family: roboto;
+        font-size:17.5px;
+        font-weight: lighter;
+        margin-top: 6px;
+        margin-left: 2%;
+        text-align: center;
+    }  
+}

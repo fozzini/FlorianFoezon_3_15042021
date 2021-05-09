@@ -1,0 +1,35 @@
+.footer{
+    height: auto;
+    background-color: darken($cd-grey, 50%);
+    color:white;
+    padding-bottom: 12px;
+    &__title{
+        margin-left:25px;
+        margin-top: 0%;
+        padding-top: 26px;;
+        font-family: Shrikhand;
+        font-weight: lighter;
+        font-size: 18px;   
+    }
+    &__list{
+        display: flex;
+        flex-direction: column;
+        padding-left: 25px;
+        padding-top: 6px;
+        list-style:none;
+        
+        &__links{
+            color:white;
+            font-family: roboto;
+            font-weight: lighter;
+            text-decoration: none;
+            font-size:16px;
+            margin-top: 5px;
+            margin-bottom: 0px;  
+            i{
+                margin-right: 6px;
+                font-size: 12px;
+            }
+        }
+    }
+}

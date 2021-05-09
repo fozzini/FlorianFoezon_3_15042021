@@ -1,0 +1,24 @@
+.hearticones--1{
+    position: absolute;
+    z-index: 1;
+    font-size: 1.5rem;
+    top:26.3%;                                                                                                                            
+    right:5.2%;
+    background-image: linear-gradient(to top,$cd-secondary,$cd-primary);
+    background-clip: text;
+    color: transparent;
+    background-position: 0 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    transition: background-position 1s;        
+    &:hover{
+        background-position: 0 0px;    
+    }
+}
+.hearticones--2{
+    font-size: 1.5rem;
+    top:26.3%;
+    right:5.2%;
+    color:black;
+    position:absolute;   
+}

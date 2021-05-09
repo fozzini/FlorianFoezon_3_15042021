@@ -1,0 +1,26 @@
+.loader{  
+    position: absolute;
+    background: $cd-primary; 
+    min-height:100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 200%;
+    color: $cd-secondary ;
+    z-index: +1;
+    animation:exitloader $anim-dur forwards 1;
+    &__ripple{ 
+        @for $i from 1 through $num-ripple {
+            &--#{$i} {
+                position: absolute;
+                box-sizing: border-box;
+                border: 1px solid $cd-tertiary;
+                box-shadow: 0px 5px 18px -3px $cd-tertiary;
+                border-radius: 50%;
+                animation: animate $anim-dur linear 2;
+                animation-delay: $anim-delay * $i;
+            }
+        }
+    }    
+}

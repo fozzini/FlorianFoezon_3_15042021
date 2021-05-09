@@ -1,0 +1,73 @@
+.sticker--menu{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 5px 18px -3px darken($cd-grey, 30%);
+    margin: 0px 13px 13px 14px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: black;
+    &__description{ 
+        display: flex;
+        flex-direction: column;
+        width:85%;     
+        &__title{
+            font-family: roboto;
+            font-weight: bold;
+            font-size: 18px;
+            margin:11px 0px 4px 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;               
+        }
+        &__subtitle{
+            font-family: roboto;
+            font-weight: lighter;
+            font-size:14px;
+            margin:0px 0px 12px 10px;
+            white-space: nowrap;
+            overflow:hidden;
+            text-overflow: ellipsis; 
+        }
+    }
+    &__price{
+        font-family: roboto;
+        justify-items:center ;
+        font-weight: bold;
+        font-size: 15px;
+        background-color: white;
+        width:14%;
+        
+    }
+    &__icon{
+        display: flex;
+        background-color: $cd-tertiary;
+        width:0%;
+        border-radius: 0px 15px 15px 0px;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        transition:width 1s ease-in-out;
+        &__check{
+            background-color: white;
+            color:$cd-tertiary;
+            font-size: 12px;
+            padding: 4px;
+            border-radius: 25px;
+        }
+    }
+    &:hover{
+        .sticker--menu__price{
+            width:5%;
+        }
+        .sticker--menu__icon{
+            width:10%;
+            &__check{
+                animation:checkrotation 1s ease-in-out;
+                font-size: 12px;
+                padding: 4px;
+                
+            }
+        }  
+    } 
+            
+}
