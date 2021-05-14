@@ -6,10 +6,14 @@
     border-radius: 15px;
     text-decoration: none;
     color: black;
+    overflow: hidden;
+  
     &__description{ 
         display: flex;
         flex-direction: column;
-        width:85%;     
+        width:85%;
+        transition:width 1s ease-in-out;
+       
         &__title{
             font-family: roboto;
             font-weight: bold;
@@ -30,12 +34,14 @@
         }
     }
     &__price{
+        
         font-family: roboto;
         justify-items:center ;
         font-weight: bold;
         font-size: 15px;
         background-color: white;
         width:14%;
+        transition:width 1s ease-in-out;
         
     }
     &__icon{
@@ -56,11 +62,14 @@
         }
     }
     &:hover{
+        .sticker--menu__description{
+            width:60%;
+        }
         .sticker--menu__price{
             width:5%;
         }
         .sticker--menu__icon{
-            width:10%;
+            width:25%;
             &__check{
                 animation:checkrotation 1s ease-in-out;
                 font-size: 12px;

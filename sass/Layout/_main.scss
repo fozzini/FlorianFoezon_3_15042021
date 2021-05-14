@@ -1,5 +1,6 @@
 .main{
     height: auto;
+    position: relative;    
     &__services{
         display: flex;
         flex-direction: column;
@@ -29,5 +30,6 @@
         flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
+        
     }
 }
