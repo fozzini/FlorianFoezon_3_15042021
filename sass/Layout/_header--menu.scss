@@ -1,6 +1,6 @@
 .headermenu{
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     &__sticker{
         background-repeat: no-repeat;
         background-position:top;
@@ -8,6 +8,10 @@
         margin-bottom: 0px;
         padding: 37%;
         position: relative;
+        @media all and (min-width: 768px){
+            padding: 15%;
+            background-position: center; 
+        }
         &__description{
             display: flex;
             font-family:Shrikhand; 
