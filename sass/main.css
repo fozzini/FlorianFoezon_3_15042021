@@ -644,7 +644,7 @@
   width: 5%;
 }
 .sticker--menu:hover .sticker--menu__icon {
-  width: 25%;
+  width: 18%;
 }
 .sticker--menu:hover .sticker--menu__icon__check {
   -webkit-animation: checkrotation 1s ease-in-out;
