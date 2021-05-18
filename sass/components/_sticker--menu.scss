@@ -34,9 +34,12 @@
         }
     }
     &__price{
-        
         font-family: roboto;
         justify-items:center ;
+        margin-top: 40px;
+        margin-left: 0px;
+        margin-bottom: 0px;
+        margin-right: 10px;
         font-weight: bold;
         font-size: 15px;
         background-color: white;
@@ -77,6 +80,5 @@
                 
             }
         }  
-    } 
-            
+    }           
 }

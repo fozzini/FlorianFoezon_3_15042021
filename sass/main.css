@@ -39,7 +39,7 @@
 
 .loader {
   background: #9356DC;
-  position: absolute;
+  position: fixed;
   height: 100%;
   width: 100%;
   display: flex;
@@ -116,7 +116,7 @@
   background-position: top;
   background-size: cover;
   margin-bottom: 0px;
-  padding: 37%;
+  padding: 38%;
   position: relative;
 }
 @media all and (min-width: 768px) {
@@ -132,7 +132,7 @@
   position: absolute;
   bottom: -1%;
   left: 0%;
-  font-size: 13px;
+  font-size: 14px;
   margin-top: 19px;
   border-radius: 40px 40px 0px 0px;
   width: 100%;
@@ -155,14 +155,14 @@
   font-family: roboto;
   font-size: 24px;
   text-align: center;
-  margin-top: 35px;
-  margin-bottom: 0px;
+  margin: 35px 47px 0px 47px;
 }
 .header__subtitle {
   font-family: roboto;
   font-size: 17.5px;
   font-weight: lighter;
   margin-top: 6px;
+  margin-bottom: 30px;
   text-align: center;
 }
 
@@ -204,14 +204,13 @@
   display: flex;
   flex-direction: column;
   height: auto;
-  margin-bottom: 10px;
 }
 .menu__title {
   font-family: roboto;
   font-weight: lighter;
   font-size: 16px;
   margin-left: 20px;
-  margin-top: 32px;
+  margin-top: 30px;
   border-bottom: 3px solid #99E2D0;
   width: 40px;
   padding-bottom: 3px;
@@ -401,7 +400,7 @@
   border: none;
   border-radius: 35px;
   cursor: pointer;
-  padding: 15px 15px;
+  padding: 15px 25px;
   text-decoration: none;
 }
 .button:hover {
@@ -421,7 +420,8 @@
 .box__commandbutton {
   padding-left: 45px;
   padding-right: 45px;
-  margin-bottom: 25px;
+  margin-bottom: 55px;
+  margin-top: 25px;
 }
 
 .searchbar {
@@ -455,13 +455,12 @@
   font-weight: lighter;
   justify-content: center;
   align-items: center;
-  margin: 20px 0px 13px 0px;
 }
 
 .arrow {
   color: black;
   position: absolute;
-  top: 55px;
+  top: 25px;
   left: 24px;
 }
 
@@ -611,6 +610,10 @@
 .sticker--menu__price {
   font-family: roboto;
   justify-items: center;
+  margin-top: 40px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  margin-right: 10px;
   font-weight: bold;
   font-size: 15px;
   background-color: white;
@@ -693,4 +696,9 @@
 }
 .hearticones--2:hover {
   opacity: 0;
+}
+
+.menuajustment {
+  top: 60%;
+  right: 10%;
 }/*# sourceMappingURL=main.css.map */
