@@ -461,7 +461,7 @@
 .arrow {
   color: black;
   position: absolute;
-  top: 25px;
+  top: 55px;
   left: 24px;
 }
 
@@ -674,6 +674,7 @@
   color: transparent;
   background-position: 0 24px;
   height: 24px;
+  cursor: pointer;
   background-repeat: no-repeat;
   transition: background-position 1s;
 }
