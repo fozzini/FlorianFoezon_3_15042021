@@ -1,6 +1,6 @@
 .hearticones--1{
     position: absolute;
-    z-index: 1;
+    
     font-size: 1.5rem;
     top:26.3%;                                                                                                                            
     right:5.2%;
@@ -13,8 +13,7 @@
     transition: background-position 1s;        
     &:hover{
         background-position: 0 0px;    
-    }
-    
+    }  
 }
 .hearticones--2{
     font-size: 1.5rem;
