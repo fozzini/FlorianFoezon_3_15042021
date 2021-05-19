@@ -4,7 +4,7 @@
     top:26.3%;                                                                                                                            
     right:5.2%;
     background-image: linear-gradient(to top,$cd-secondary,$cd-primary);
-    background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
     background-position: 0 24px;
     height: 24px;
