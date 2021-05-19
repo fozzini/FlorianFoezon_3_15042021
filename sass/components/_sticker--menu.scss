@@ -7,7 +7,6 @@
     text-decoration: none;
     color: black;
     overflow: hidden;
-  
     &__description{ 
         @include display(flex,column);
         width:85%;
@@ -29,10 +28,10 @@
     }
     &__price{
         @include typography(roboto,15px,bold);
-        justify-items:center ;
-        margin:40px 0px 0px 10px;
+        justify-items:center;
+        margin:40px 10px 0px 10px;
         background-color: white;
-        width:14%;
+        width:15%;
         transition:width 1s ease-in-out;
     }
     &__icon{

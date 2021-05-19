@@ -12,9 +12,9 @@
   margin-left: 25px;
   margin-top: 0%;
   padding-top: 26px;
-  font-family: Shrikhand;
-  font-weight: lighter;
+  font-family: shrikhand;
   font-size: 18px;
+  font-weight: lighter;
 }
 .footer__list {
   display: flex;
@@ -26,9 +26,9 @@
 .footer__list__links {
   color: white;
   font-family: roboto;
+  font-size: 16px;
   font-weight: lighter;
   text-decoration: none;
-  font-size: 16px;
   margin-top: 5px;
   margin-bottom: 0px;
 }
@@ -43,6 +43,7 @@
   height: 100%;
   width: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   font-size: 200%;
@@ -127,18 +128,19 @@
 }
 .headermenu__sticker__description {
   display: flex;
-  font-family: Shrikhand;
+  flex-direction: row;
+  font-family: shrikhand;
+  font-size: 14px;
+  font-weight: normal;
   background-color: white;
   position: absolute;
   bottom: -1%;
   left: 0%;
-  font-size: 14px;
   margin-top: 19px;
   border-radius: 40px 40px 0px 0px;
   width: 100%;
 }
 .headermenu__sticker__description__title {
-  font-weight: lighter;
   margin-left: 21px;
   margin-top: 40px;
   margin-bottom: 0px;
@@ -154,6 +156,7 @@
 .header__title {
   font-family: roboto;
   font-size: 24px;
+  font-weight: normal;
   text-align: center;
   margin: 35px 47px 0px 47px;
 }
@@ -177,6 +180,7 @@
 }
 .main__services__title {
   font-family: roboto;
+  font-size: 18px;
   font-weight: bold;
   margin-left: 21px;
   padding-top: 25px;
@@ -187,6 +191,8 @@
 }
 .main__restaurants__title {
   font-family: roboto;
+  font-size: 18px;
+  font-weight: normal;
   padding: 50px 20px 20px 21px;
   margin-bottom: 0px;
 }
@@ -196,6 +202,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
   }
 }
@@ -207,8 +214,8 @@
 }
 .menu__title {
   font-family: roboto;
-  font-weight: lighter;
   font-size: 16px;
+  font-weight: lighter;
   margin-left: 20px;
   margin-top: 30px;
   border-bottom: 3px solid #99E2D0;
@@ -391,7 +398,9 @@
 
 .button {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
   color: white;
   font-family: roboto;
   font-size: 16px;
@@ -415,6 +424,7 @@
 
 .box {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -428,9 +438,11 @@
 .searchbar {
   border: hidden;
   display: flex;
+  flex-direction: row;
   background-color: #eaeaea;
   box-shadow: inset 0px 5px 5px 0px #d1d1d1;
   justify-content: center;
+  align-items: center;
   padding-top: 13px;
   padding-bottom: 13px;
 }
@@ -450,7 +462,7 @@
 .logo {
   display: flex;
   flex-direction: row;
-  font-family: Shrikhand;
+  font-family: shrikhand;
   font-size: 30px;
   font-weight: lighter;
   height: 63px;
@@ -494,6 +506,7 @@
   content: "" counter(section);
   position: absolute;
   display: flex;
+  flex-direction: row;
   list-style-type: decimal;
   background-color: #9356DC;
   border-radius: 45px;
@@ -508,7 +521,7 @@
 }
 .ordertype__list__icons {
   margin: 0px 21px 10px 19px;
-  font-size: 20px;
+  font-size: 22px;
   color: #d1d1d1;
 }
 .ordertype__list:hover {
@@ -523,17 +536,19 @@
 }
 @media all and (min-width: 1000px) {
   .ordertype {
+    display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
   }
 }
 
 .sticker--restaurant {
   text-decoration: none;
   display: flex;
+  flex-direction: column;
   height: auto;
   position: relative;
-  flex-direction: column;
   background-color: white;
   border-radius: 18px;
   box-shadow: 0px 5px 18px -3px #9e9e9e;
@@ -566,7 +581,7 @@
 }
 @media all and (min-width: 768px) {
   .sticker--restaurant {
-    width: 46%;
+    width: 40%;
   }
 }
 @media all and (min-width: 1200px) {
@@ -577,6 +592,7 @@
 
 .sticker--menu {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   box-shadow: 0px 5px 18px -3px #9e9e9e;
   margin: 0px 13px 13px 14px;
@@ -614,13 +630,14 @@
   font-size: 15px;
   font-weight: bold;
   justify-items: center;
-  margin: 40px 0px 0px 10px;
+  margin: 40px 10px 0px 10px;
   background-color: white;
-  width: 14%;
+  width: 15%;
   transition: width 1s ease-in-out;
 }
 .sticker--menu__icon {
   display: flex;
+  flex-direction: row;
   background-color: #99E2D0;
   width: 0%;
   border-radius: 0px 15px 15px 0px;

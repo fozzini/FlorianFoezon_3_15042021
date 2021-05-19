@@ -13,7 +13,7 @@
         }
         &__description{
             @include display(flex,row);
-            @include typography(Shrikhand,14px,normal); 
+            @include typography(shrikhand,14px,normal); 
             background-color:white;
             position:absolute;
             bottom: -1%;

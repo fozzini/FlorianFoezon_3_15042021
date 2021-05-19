@@ -22,7 +22,7 @@
 }
 .media{
     @media all and (min-width: 768px){
-        @include display(flex,column);
+        @include display(flex,row);
         @include align();
         flex-wrap: wrap;   
     }
