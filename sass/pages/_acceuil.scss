@@ -14,7 +14,7 @@
         padding-bottom: 44px;
         height: auto;
         &__title{
-            @include typography(roboto,18px,normal);
+            @include typography(roboto,18px,bold);
             padding: 50px 20px 20px 21px;
             margin-bottom: 0px;
         }
