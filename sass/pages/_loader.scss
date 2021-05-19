@@ -3,9 +3,8 @@
     position:fixed;
     height:100%;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include display(flex,row);
+    @include align();
     font-size: 200%;
     color: $cd-secondary ;
     z-index: 1;

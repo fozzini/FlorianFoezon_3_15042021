@@ -1,10 +1,6 @@
 .logo{
-    display: flex;
-    flex-direction: row;
-    font-family: Shrikhand;
+    @include display(flex,row);
+    @include typography(Shrikhand,30px,lighter);
     height:63px;
-    font-size: 30px;
-    font-weight: lighter;
-    justify-content: center;
-    align-items: center;  
+    @include align(); 
 }

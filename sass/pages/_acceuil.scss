@@ -2,12 +2,10 @@
     height: auto;
     position: relative;
     &__services{
-        display: flex;
-        flex-direction: column;
+        @include display(flex,column);
         padding-bottom: 33px;
         &__title{
-            font-family: roboto;
-            font-weight: bold;
+            @include typography(roboto,18px,bold);
             margin-left: 21px;
             padding-top: 25px;
         }   
@@ -15,9 +13,8 @@
     &__restaurants{
         padding-bottom: 44px;
         height: auto;
-        
         &__title{
-            font-family: roboto;
+            @include typography(roboto,18px,normal);
             padding: 50px 20px 20px 21px;
             margin-bottom: 0px;
         }
@@ -25,9 +22,8 @@
 }
 .media{
     @media all and (min-width: 768px){
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+        @include display(flex,column);
+        @include align();
         flex-wrap: wrap;   
     }
 }

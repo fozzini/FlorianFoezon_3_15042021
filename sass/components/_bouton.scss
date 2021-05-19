@@ -1,9 +1,8 @@
 .button {
-    display:flex;
-    justify-content:center;
+    @include display(flex,row);
+    @include align();
     color:white;
-    font-family:roboto;
-    font-size:16px;
+    @include typography(roboto,16px,normal);
     box-shadow: $box-shadow;
     background:$button-gradient;
     border: none;
@@ -21,9 +20,8 @@
     }
 } 
 .box{
-    display: flex;
-    justify-content: center;
-    align-items: center; 
+    @include display(flex,row);
+    @include align();
     &__commandbutton{      
         padding-left: 45px;
         padding-right: 45px;

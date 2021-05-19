@@ -6,24 +6,18 @@
     &__title{
         margin-left:25px;
         margin-top: 0%;
-        padding-top: 26px;;
-        font-family: Shrikhand;
-        font-weight: lighter;
-        font-size: 18px;   
+        padding-top: 26px;
+        @include typography(Shrikhand,18px,lighter);  
     }
     &__list{
-        display: flex;
-        flex-direction: column;
+        @include display(flex,column);
         padding-left: 25px;
         padding-top: 6px;
         list-style:none;
-        
         &__links{
             color:white;
-            font-family: roboto;
-            font-weight: lighter;
+            @include typography(roboto,16px,lighter);
             text-decoration: none;
-            font-size:16px;
             margin-top: 5px;
             margin-bottom: 0px;  
             i{

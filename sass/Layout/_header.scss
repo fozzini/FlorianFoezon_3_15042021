@@ -1,19 +1,15 @@
 .header{
-    display: flex;
-    flex-direction: column;
+    @include display(flex,column);
     height:auto;
     background-color:white;
     padding-bottom: 55px;
     &__title{
-        font-family: roboto;
-        font-size:24px;
+        @include typography(roboto,24px,normal);
         text-align: center;
         margin: 35px 47px 0px 47px;
     }
     &__subtitle{
-        font-family: roboto;
-        font-size:17.5px;
-        font-weight: lighter;
+        @include typography(roboto,17.5px,lighter);
         margin-top: 6px;
         margin-bottom: 30px;
         text-align: center;

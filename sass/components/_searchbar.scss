@@ -1,9 +1,9 @@
 .searchbar{
     border:hidden;
-    display: flex;
+    @include display(flex,row);
     background-color:$cd-grey;
     box-shadow:$box-shadow--searchbar;
-    justify-content:center;
+    @include align();
     padding-top: 13px;
     padding-bottom:13px;
     &__icon{
@@ -12,9 +12,7 @@
         padding-top: 4px;
     }
     &__input{
-        font-family:roboto;
-        font-weight: bold;
-        font-size: medium;
+        @include typography(roboto,medium,bold);
         border-style: none;
         background-color:$cd-grey;
     }
