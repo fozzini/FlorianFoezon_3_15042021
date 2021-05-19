@@ -5,7 +5,7 @@
     &__list{ 
         margin: 15px 18px 18px 32px;
         text-decoration: none;
-        @include typography(roboto,15px,bold);
+        @include typography(roboto,15.5px,bold);
         color: black;
         background-color: white;
         border-radius: 18px;

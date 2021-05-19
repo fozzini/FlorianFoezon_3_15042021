@@ -4,7 +4,7 @@
     background-color:white;
     padding-bottom: 55px;
     &__title{
-        @include typography(roboto,24px,normal);
+        @include typography(roboto,24px,bold);
         text-align: center;
         margin: 35px 47px 0px 47px;
     }
